@@ -1,0 +1,162 @@
+/* style.css - Clean, modern, slightly futuristic look */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg, #232526 0%, #414345 100%);
+    color: #f5f5f5;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 0 1rem 0;
+    background: rgba(30, 30, 40, 0.85);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: rgba(40, 44, 52, 0.95);
+    border-radius: 1.2rem;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #00c6ff;
+}
+
+.card .caption {
+    padding: 1rem;
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    flex: 1;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: rgba(30, 30, 40, 0.85);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin-top: 2rem;
+    color: #b0b0b0;
+}
+
+/* Modal styles for advanced features */
+#modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0; right: 0; bottom: 0;
+    background: rgba(20, 24, 32, 0.92);
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s;
+}
+#modal .modal-content {
+    background: #232526;
+    border-radius: 1.2rem;
+    padding: 2rem 2rem 1.5rem 2rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.45);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 320px;
+    max-width: 90vw;
+    max-height: 90vh;
+    position: relative;
+}
+#modal img {
+    max-width: 60vw;
+    max-height: 50vh;
+    border-radius: 0.8rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+}
+#modal .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    color: #00c6ff;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    transition: color 0.2s;
+}
+#modal .close-btn:hover, #modal .close-btn:focus {
+    color: #fff;
+}
+#modal #modal-caption {
+    color: #e0e0e0;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+#modal .modal-controls {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+#modal .modal-controls button {
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+#modal .modal-controls button:hover, #modal .modal-controls button:focus {
+    background: linear-gradient(90deg, #0072ff, #00c6ff);
+    transform: scale(1.08);
+}
+
+.gallery-section {
+    margin-bottom: 3rem;
+}
+.section-title {
+    font-size: 1.5rem;
+    margin: 0 0 1.2rem 0;
+    color: #00c6ff;
+    letter-spacing: 1px;
+    text-align: left;
+    padding-left: 0.5rem;
+}
+.section-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+}
